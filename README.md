@@ -10,7 +10,7 @@ Follow the instructions [here](https://kivy.org/doc/stable/installation/installa
 
 Just use Step 1 - 3 (This will work but take a bit)
 
-Be aware that you might have to use `pip3` instead of `pip` if you have python 2.7 already installed. To check that run `pip --version` to see to which folder pip will install the packages.
+Be aware that you might have to use `pip3` instead of `pip` if you have python 2.7 already installed. Also install Cython without using a version string. Just install latest greatest. To check that run `pip --version` to see to which folder pip will install the packages.
 
 Maybe considering using not the Master branch, there is also a branch called `stable-1.10` if you want to go on a more stable version.
 
