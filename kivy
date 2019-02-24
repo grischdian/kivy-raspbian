@@ -1,0 +1,27 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:		kivy
+# Required-Start:	$remote_fs $syslog triggerhappy
+# Required-Stop:	$remote_fs $syslog
+# Default-Start:	2 3 4 5
+# Default-Stop:		
+# Short-Description:	OpenBSD Secure Shell server
+### END INIT INFO
+
+case "$1" in
+  start)
+	  echo "Starting Kivy"
+	  sudo -u pi /usr/bin/python3 /home/pi/kivy/examples/demo/touchtracer/main.py
+	;;
+  stop)
+	  echo "Stopping kivy"
+	  killall python3
+	;;
+
+  *)
+	log_action_msg "Usage: /etc/init.d/kivy {start|stop}" || true
+	exit 1
+esac
+
+exit 0
