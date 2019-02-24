@@ -14,6 +14,10 @@ Be aware that you might have to use `pip3` instead of `pip` if you have python 2
 
 Maybe considering using not the Master branch, there is also a branch called `stable-1.10` if you want to go on a more stable version.
 
+## Download example app
+
+Clone the Kivy Git Repo [here](https://github.com/kivy/kivy), go to `./kivy/examples/demo/touchtracer/` and edit the `main.py` according to the instructions above. 
+
 ## Add at the beginning of your `main.py` the following
 
 ```
@@ -21,6 +25,8 @@ import os
 os.environ['KIVY_GL_BACKEND'] = 'gl'
 import kivy
 ```
+## Run and fail (to create kivy config.ini)
+Run with `python3 main.py`
 
 ## Edit kivy Config located in `~/.kivy/config.ini`
 This File will only exist after the first "failed" run. 
@@ -31,10 +37,7 @@ device_%(name)s = probesysfs,provider=mtdev
 mtdev_%(name)s = probesysfs,provider=mtdev
 hid_%(name)s = probesysfs,provider=hidinput
 ```
-## Test it!
-
-Clone the Kivy Git Repo [here](https://github.com/kivy/kivy), go to `./kivy/examples/demo/touchtracer/` and edit the `main.py` according to the instructions above. 
-
+## Run again without errors
 Run with `python3 main.py`
 
 ## Autostart your application on raspbian
