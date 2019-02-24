@@ -23,6 +23,7 @@ import kivy
 ```
 
 ## Edit kivy Config located in `~/.kivy/config.ini`
+This File will only exist after the first "failed" run. 
 ```
 [input]
 mouse = mouse
@@ -35,6 +36,14 @@ hid_%(name)s = probesysfs,provider=hidinput
 Clone the Kivy Git Repo [here](https://github.com/kivy/kivy), go to `./kivy/examples/demo/touchtracer/` and edit the `main.py` according to the instructions above. 
 
 Run with `python3 main.py`
+
+## Autostart your application on raspbian
+Copy `kivy` Script from this repo to `/etc/init.d/kivy` and adjust the path to your application.
+Run `sudo update-rc.d kivy defaults` as root
+
+Reboot
+
+Enjoy!
 
 ## Support / Contact
 
